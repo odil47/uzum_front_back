@@ -33,4 +33,17 @@ const getKorzinka = async (req, res) => {
     }
 }
 
-module.exports = { addToKorzinka, getKorzinka }
+const deleteFromKorzinka = async (req, res) => {
+    try {
+        const { productId, userID } = req.body;
+        const deletedItem = await korzinkaModel.findOneAndDelete({ productId, userID });
+        if (!deletedItem) {
+            return res.status(404).json({ message: "Korzinka item topilmadi" });
+        }
+        res.status(200).json({ message: "Korzinka item o'chirildi" });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
+module.exports = { addToKorzinka, getKorzinka, deleteFromKorzinka }

@@ -22,7 +22,7 @@ const login = async (req, res) => {
         }
         
         res.status(200).json({
-            massage: "Muvaffaqiyatli kirildi",
+            message: "Muvaffaqiyatli kirildi",
             data: user
         });
     } catch (error) {

@@ -20,7 +20,7 @@ const cardCreate = async (req, res) => {
         const cards = await getAllmodel.insertMany(items);
 
         res.status(201).json({
-            message: "Card muvofaqtiyatli yaratildi",
+            message: "Card muvofaqiyatli yaratildi",
             data: cards
         });
 
