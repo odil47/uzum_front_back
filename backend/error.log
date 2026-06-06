@@ -1,0 +1,7 @@
+Error connecting to MongoDB: Error: querySrv ECONNREFUSED _mongodb._tcp.xob.t4engkn.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:294:17) {
+  errno: undefined,
+  code: 'ECONNREFUSED',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.xob.t4engkn.mongodb.net'
+}
